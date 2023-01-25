@@ -1,0 +1,75 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 1rem; */
+}
+
+/* burger menu styles */
+
+.burger {
+  height: 20px;
+  width: 30px;
+  position: relative;
+}
+
+.burger-line {
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background-color: #070026;
+  transition: .4s all ease;
+}
+
+.top-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.mid-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bottom-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.burger.active>.top-line {
+  transform: translateY(8px) rotate(45deg);
+  transition: .4s all ease;
+}
+
+.burger.active>.mid-line {
+  transition: .3s all ease;
+  opacity: 0;
+}
+
+.burger.active>.bottom-line {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: .4s all ease;
+}
+
+/* -------------------------------- */
+
+.filter-drop {
+  filter: drop-shadow(0 0 0.75rem #dedede);
+}
+
+.fade-in-image {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
